@@ -1,0 +1,18 @@
+/*descedant selector*/
+div p{
+    color:rgb(255,0,0);
+
+}
+/*child selector*/
+div > p{
+  color:yellowgreen;
+}
+
+/*adjacent sibling selector*/
+div + p{
+  color:aquamarine;
+}
+/*General sibling selctor*/
+div ~ p{
+  color:yellow;
+}

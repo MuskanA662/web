@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validate(){
+                console.log("Calling Validate function")
+                var userName = document.getElementById("userName")
+                console.log(userName.value)
+                console.log(userName.value.length)
+                if(userName.value == ''){
+                    console.log("Please enter Username")
+                    var errorUserName = document.getElementById("errorUserName")
+                    errorUserName.innerHTML = "Please enter username"
+                    errorUserName.style.color = 'red'
+                }
+                var email = document.getElementById("email")
+                console.log(email.value)
+                if(email.value == ''){
+                    console.log("Please enter Email")
+                    var errorEmail = document.getElementById("errorEmail")
+                    errorEmail.innerHTML = "Please enter email"
+                    errorEmail.style.color = 'red'
+                    }
+                var password = document.getElementById("password")
+                console.log(password.value)
+                if(password.value == ''){
+                    console.log("Please enter password")
+                    var errorPassword = document.getElementById("errorPassword")
+                    errorPassword.innerHTML = "Please enter password"
+                    errorPassword.style.color = 'red'
+                    }
+                    var city = document.formRegister.city
+                    console.log(city)
+                    if(city.value =="0")
+                    {
+                      console.log ("Please select city");
+                      var errorcity=document.getElementById("errorcity")
+                      errorcity.innerHTML = "Please enter city"
+                      errorcity.style.color = 'red'
+                }
+            
+                    /*Strong localstorage,sessionstorage
+
+                    UserName
+                    email
+                    password
+                    gender
+                    city*/
+                    console.log(userName.value)
+                    console.log(password.value)
+                    console.log(email.value)
+                    var obj={
+                        "UserName": userName.value,
+                        "email":email.value,
+                        "password":password.value
+                    }
+                    console.log(obj)
+                    localStorage.setItem("javascript","storage in localstorage")
+                    var objString=JSON.stringify(obj)
+                    console.log(objString)
+                    localStorage.setItem("xworkzuser",objString)
+                    localStorage.getItem("xworkzuser")
+                    console.log()
+                }
+                
+                </script>
+                
+
+                <!--var gender = document.formRegister.gender
+                console.log(gender)
+                if(gender.value == ''){
+                    console.log("Please enter gender")
+                    var errorGender = document.getElementById("errorGender")
+                    errorGender.innerHTML = "Please enter gender"
+                    errorGender.style.color = 'red'
+                }
+                console.log(gender[0])
+                console.log(gender[1])
+                console.log(gender[2])
+                console.log(gender[0].checked)
+                console.log(gender[1].checked)
+                console.log(gender[2].checked)
+                if(gender[0].checked == false && gender[1].checked == false && gender[2].checked == false){
+                    console.log("Please select gender")
+                }
+
+            }-->
+            
+        </script>
+    </head>
+    <body>
+        <!-- form-->
+        <form name="formRegister">
+            <div>
+                <label>Enter Username</label>
+                <input type="text" name="userName" id="userName">
+                <span id="errorUserName"></span>
+            </div>
+            <div>
+                <label>Enter email</label>
+                <input type="email" name="email" id="email">
+                <span id="errorEmail"></span>
+            </div>
+            <div>
+                <label>Enter password</label>
+                <input type="password" name="password" id="password">
+                <span id="errorPassword"></span>
+            </div>
+            <!--<div>
+                <label>Enter gender</label>
+                <input type="gender" name="gender" id="gender">
+                <span id="errorGender"></span>
+            </div>-->
+            <div>
+                <label>Select Gender</label>
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender">Others
+            </div>
+            <div>
+                <label> select city</label>
+            <select name="city">
+                <option value="0">--select city--</option>
+                <option>bangalore</option>
+                <option>mysore</option>
+                <option>mudhol</option>
+            </select>
+            <span id="errorcity"></span>
+            </div>
+
+            <button type="button" onclick="validate()">Register</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <!-- When you click button
+            Generate event
+            input -> click on button
+            output -> Error message-->
+    </body>
+</html>

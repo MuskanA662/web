@@ -1,0 +1,96 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <script>
+            console.log("Introduction to javascript");
+            //how to creae a variable
+            // var keyword variable name
+            //console.log is used for print the statement
+            //console is a object reference
+            //log is a function
+            var a   //declaration of variable
+            console.log(a)
+            console.log(typeof(a)) //data type -- undefined
+            a=10    //initialization
+            console.log(a)
+            console.log(typeof(a)) //data type -- number
+            typeof(a)   //typeof is afunction which used to know the datatype of that variable
+            a = "javascript";
+            console.log(a)
+            console.log(typeof(a)) //data type -- string
+            a = 42.24
+            console.log(a)
+            console.log(typeof(a)) // data type -- number
+            a = true
+            console.log(a)
+            console.log(typeof(a)) // data type -- bollean
+
+
+            //Function
+            //How to declare a function
+            //function is used to perform a task
+            //Syntax-->functionkeyword functionname() {
+            //}
+            function display(){
+                console.log("we are learning functions in java")
+            }
+            display() //calling the function
+            function add(a ,b){
+              // var a=10
+               //var b=20
+                console.log(a+b)
+            }
+            add(10,20)
+            //click function or event using
+            function callFormClckButton(){
+                console.log("We are calling form callFormClckButton")
+
+               var message =  document.getElementById("message")
+               console.log (message)
+               message.innerHTML = 'We are calling from callFormClckButton'
+               //var result = add(20,30)
+            }
+            function callFormMouseOverButton(){
+                console.log("We are calling form callFormMouseOverButton")
+                
+            }
+            function addition(){
+                console.log("Adding Numbers")
+                var number1 = document.getElementById("num1")
+                var number2 = document.getElementById("num2")
+                console.log(number1.value)
+                console.log(number2.value)
+                var result = parseInt(number1.value) + parseInt(number2.value) 
+                console.log(result)
+                var additionResult = document.getElementId("additionResult")
+                additionResult.innerHTML = result
+
+            }
+
+
+
+            </script>
+    </head>
+    <body>
+        <button  onclick="callFormClckButton()">click me</button>
+        <button onclick="callFormMouseOverButton()">mouse over</button>
+        <div id="message"></div>
+        <div id="mouseOvermessage"></div>
+
+        <form><div>
+            <label>Enter number1</label>
+            <input type = "text" id ="num1">
+
+        </div>
+    <div>
+        <label> Enter Number2</label>
+        <input type = "text" Id = "num1">
+    </div>
+    <button type= "button" onclick = "addition()">Add</button>
+    <div id=" additionResult"></div>
+
+</form>
+        //Document object id=""
+    </body>
+     </html>
+
